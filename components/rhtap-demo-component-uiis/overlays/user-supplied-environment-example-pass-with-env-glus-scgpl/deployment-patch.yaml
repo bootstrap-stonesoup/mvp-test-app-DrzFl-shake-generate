@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: rhtap-demo-component-uiis
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - env:
+        - name: var_name
+          value: test
+        image: quay.io/bootstrap/rhtap-demo-dev-pfoc-tenant/mvp-test-app/rhtap-demo-component-uiis@sha256:d3e55bfdfea5535f0286eda9c354cbd9e1bdfd4f68acfa40edbc0e1574127d06
+        name: hacbs-jvm-build-test-project
+        resources: {}
+status: {}
